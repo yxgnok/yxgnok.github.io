@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		java集合面试题 | 
+	 
+	祥颜的笔记
+	</title>
+	
+	<!-- keywords,description -->
+	 
+		<meta name="description" content="托管学习笔记" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 5.1.1"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">祥颜的笔记</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/09/06/hello-world/">
+										hello-world
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										test
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/2020/09/06/test/test/">
+										test
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/09/06/%E9%9D%A2%E8%AF%95%E9%A2%98/">
+										面试题
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	面试题
+</h1>
+<div class="article-meta">
+	
+	<span>Kong Xiangyan</span>
+	<span>2020-09-06 15:00:00</span>
+    
+		<div id="article-categories">
+            
+		</div>
+    
+</div>
+
+<div id="article-content">
+	<h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p>[TOC]</p>
+<h3 id="1-Collection和Collections有什么区别"><a href="#1-Collection和Collections有什么区别" class="headerlink" title="1. Collection和Collections有什么区别"></a>1. Collection和Collections有什么区别</h3><ul>
+<li>Collection是一个集合接口。它提供了对集合对象进行基本操作的通用接口方法。Collection接口在Java类库中有很多具体的实现。Collection接口的意义时为各种具体的集合提供最大化的统一操作方式，其直接继承接口有List和Set</li>
+<li>Collections是集合类的一个工具类/帮助类，其中提供了一系列静态方法，用于对集合中元素进行排序、搜索以及线程安全等各种操作。</li>
+</ul>
+<h3 id="2-List、Set、Map之间的区别是什么"><a href="#2-List、Set、Map之间的区别是什么" class="headerlink" title="2. List、Set、Map之间的区别是什么"></a>2. List、Set、Map之间的区别是什么</h3><ol>
+<li>继承的接口不同，List和Set继承的是Collection接口，Map自己就是顶级接口</li>
+<li>List的常见实现类有ArrayList、LinkedList、Vector；Set常见实现类有HashSet、LinkedHashSet、TreeSet；Map常见实现类有HashMap、HashTable</li>
+<li>List中的元素可以重复，Set中的元素不可重复，Map储存键值对，key不可重复，value可以重复</li>
+<li>List是有序的，Set无序，其顺序由HashCode决定</li>
+<li>List集合中的Vector是线程安全的，Map中的HashTable是线程安全的</li>
+</ol>
+<h3 id="3-hashmap和hashtable的区别"><a href="#3-hashmap和hashtable的区别" class="headerlink" title="3. hashmap和hashtable的区别"></a>3. hashmap和hashtable的区别</h3><ol>
+<li>hashmap是线程不安全的，hashtable是线程安全的，hashtable在实现方法里面都加了synchronized,通常选用concurrenthashmap作为hashtable的替代</li>
+<li>继承的父类不同，HashTable继承的是Dictionary父类，HashMap继承的是AbstractMap父类，但是都实现了map，cloneable，serializable接口</li>
+<li>hashtable的value和key都不支持null，为null的时候会抛出空指针异常，hashmap的key可以为null，当key为null时，hash值为0</li>
+<li>遍历方法不同</li>
+<li>初始容量不同，hashmap的初始容量为16，hashtable为11</li>
+<li>扩容容量不同，hashmap每次扩容容量变为原来的2倍，hashtable每次扩容容量变为原来的2n+1倍</li>
+</ol>
+<h3 id="4-HashMap和TreeMap的区别"><a href="#4-HashMap和TreeMap的区别" class="headerlink" title="4. HashMap和TreeMap的区别"></a>4. HashMap和TreeMap的区别</h3><p>HashMap和TreeMap都继承自AbstractMap，都是线程不安全的，TreeMap还实现了NavigableMap（实现该接口让TreeMap有了对集合内元素的搜索的能力）和SortedMap接口。TreeMap默认是按照key的升序排序，不过也可以指定排序的比较器。</p>
+<h3 id="5-HashMap的实现原理"><a href="#5-HashMap的实现原理" class="headerlink" title="5. HashMap的实现原理"></a>5. HashMap的实现原理</h3><p>HashMap是基于哈希表的Map接口的非同步实现。此实现提供所有可选的映射操作，并允许使用null值和null键。此类不保证映射的顺序，特别是他不保证该顺序恒久不变。</p>
+<p>HashMap的数据结构是一个链表散列，即数组和链表的结合体。</p>
+<p>当我们往Hashmap中put元素时,首先根据key的hashcode重新计算hash值,根据hash值得到这个元素在数组中的位置(下标),如果该数组在该位置上已经存放了其他元素,那么在这个位置上的元素将以链表的形式存放,新加入的放在链头,最先加入的放入链尾.如果数组中该位置没有元素,就直接将该元素放到数组的该位置上。</p>
+<p>Jdk 1.8中对HashMap的实现做了优化,当链表中的节点数据超过八个之后,该链表会转为红黑树来提高查询效率,从原来的O(n)到O(logn)</p>
+<h3 id="6-ArrayList和LinkedList的区别"><a href="#6-ArrayList和LinkedList的区别" class="headerlink" title="6.ArrayList和LinkedList的区别"></a>6.ArrayList和LinkedList的区别</h3><ol>
+<li>ArrayList和LinkedList都是线程不同步的</li>
+<li>ArrayList底层使用的是Object数组；LinkedList底层使用的是双向链表</li>
+<li><strong>ArrayList插入和删除元素受元素位置的影响。</strong>执行<code>add(E e)</code>操作的时候，ArrayList默认将指定的元素追加到此列表的末尾，这种情况时间复杂度就是O(1)，但是要在指定位置i插入和删除元素的话<code>add(int index,E element)</code>时间复杂度为O(n-i).因为在进行上诉操作的时候第i和第i个元素以后的(n-i)个元素都要执行向后移一位的操作。 LinkedList 采⽤链表存储，所以对于 add(E e) ⽅法的插⼊，<strong>删除元素时间复杂度不受元素位置的影响</strong>，近似 O（1），如果是要在指定位置 i 插⼊和删除元素的话<code>add(int index, E element) </code>时间复杂度近似为 o(n)) 因为需要先移动到指定位置再插⼊。</li>
+<li>LinkedList 不⽀持⾼效的随机元素访问，⽽ ArrayList ⽀持。快速随机访问就是通过元素的序号快速获取元素对象(对应于 get(int index) ⽅法)。使用下标访问一个元素，ArrayList 的时间复杂度是 O(1)，而 LinkedList 是 O(n)。</li>
+<li>ArrayList的空间浪费体现在list列表的结尾会预留一定的容量空间，而LinkedList的空间花费体现在它的每一个元素都需要消耗比ArrayList更多的空间（因为要存放直接后继和直接前驱以及数据）</li>
+</ol>
+<h3 id="7-如何实现数组和List之间的转换"><a href="#7-如何实现数组和List之间的转换" class="headerlink" title="7. 如何实现数组和List之间的转换"></a>7. 如何实现数组和List之间的转换</h3><ul>
+<li>数组转换为List，调用Arrays的asList方法</li>
+<li>List转换为数组，调用ArrayList的toArray方法</li>
+</ul>
+<h3 id="8-ArrayList和Vector的区别"><a href="#8-ArrayList和Vector的区别" class="headerlink" title="8.ArrayList和Vector的区别"></a>8.ArrayList和Vector的区别</h3><ol>
+<li>ArrayList是List的主要实现类，底层使用Object[]存储，适用于频繁的查找工作，线程不安全</li>
+<li>Vector是List的古老实现类，底层使用Object[]存储，线程安全</li>
+</ol>
+<h3 id="9-Array（数组）和ArrayList有何区别"><a href="#9-Array（数组）和ArrayList有何区别" class="headerlink" title="9. Array（数组）和ArrayList有何区别"></a>9. Array（数组）和ArrayList有何区别</h3><ol>
+<li>Array可以容纳基本类型和对象，而ArrayList只能容纳对象</li>
+<li>Array是指定大小的，而ArrayList大小是固定的</li>
+<li>Array没有提供ArrayList那么多功能，比如addAll、removeAll和iterator等</li>
+</ol>
+<h3 id="10-哪些集合是线程不安全的，怎么解决"><a href="#10-哪些集合是线程不安全的，怎么解决" class="headerlink" title="10. 哪些集合是线程不安全的，怎么解决"></a>10. 哪些集合是线程不安全的，怎么解决</h3><p>ArrayList,LinkedList,HashMap,HashSet,TreeSet,TreeMap,PriorityQueue都不是线程安全的。可以使用线程安全的集合来替代。</p>
+<ol>
+<li>ConcurrentHashMap 可以看做线程安全的HashMap</li>
+<li>CopyOnWriteArrayList 可以看做安全的ArrayList，在读多写少的场合性能非常好，远远好于Vector</li>
+<li>ConcurrentLinkedQueue 高效的并发队列，使用链表实现。可以看做一个线程安全的LinkedList，这是一个非阻塞队列。</li>
+<li>BlockingQueue 这是一个接口，jdk内部通过链表、数组等方式实现类这个接口，表示阻塞队列，非常适合用于作为数组共享的通道</li>
+<li>ConcurrentSkipListMap 跳表的实现。这是一个Map，使用跳表的数据结构进行快速查找</li>
+</ol>
+<h3 id="11-迭代器Iterator是什么，怎么使用，有什么特点？"><a href="#11-迭代器Iterator是什么，怎么使用，有什么特点？" class="headerlink" title="11. 迭代器Iterator是什么，怎么使用，有什么特点？"></a>11. 迭代器Iterator是什么，怎么使用，有什么特点？</h3><p>迭代器是一种设计模式，他是一个对象，可以对集合进行遍历。</p>
+<p>迭代器是将<code>hasNext()</code>和<code>next()</code>方法抽取出接口，在每个类内部，定义自己迭代方式，这样做就规定了整个集合体系的遍历方式都是<code>hasNext()</code>和<code>next()</code>方法，使用者不用管怎么实现的，会用即可，迭代器的定义为：提供一种方法访问一个容器对象中各个元素，而用不需要暴露该对象的内部细节。</p>
+<p>Iterator主要是用来遍历集合的，它的特点是更加安全，因为它可以确保，在当前遍历的集合元素被更改的时候，就会抛出ConcurrentModificationException异常。</p>
+<p>使用例子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Map&lt;Integer,String&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="number">1</span>, <span class="string">&quot;java&quot;</span>);</span><br><span class="line">        map.put(<span class="number">2</span>, <span class="string">&quot;c#&quot;</span>);</span><br><span class="line">        map.put(<span class="number">3</span>, <span class="string">&quot;php&quot;</span>);</span><br><span class="line">        Iterator&lt;Map.Entry&lt;Integer,String&gt;&gt; iterator = map.entrySet().iterator();</span><br><span class="line">        <span class="keyword">while</span>(iterator.hasNext()) &#123;</span><br><span class="line">            Map.Entry&lt;Integer,String&gt; entry = iterator.next();</span><br><span class="line">            System.out.println(entry.getKey()+<span class="string">&quot;,&quot;</span>+entry.getValue());</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="12-Iterator和ListIterator有什么区别"><a href="#12-Iterator和ListIterator有什么区别" class="headerlink" title="12. Iterator和ListIterator有什么区别"></a>12. Iterator和ListIterator有什么区别</h3><ul>
+<li>Iterator可以用来遍历Set和List集合，但是ListIterator只能用来遍历List</li>
+<li>Iterator对集合只能是前向遍历，ListIterator既可以前向也可以后向</li>
+<li>ListIterator实现了Iterator接口，并包含其它功能，比如，增加元素，替换元素，获取前一个和后一个元素的索引等等。</li>
+</ul>
+<h3 id="13-ConcurrentHashMap和HashTable的区别"><a href="#13-ConcurrentHashMap和HashTable的区别" class="headerlink" title="13. ConcurrentHashMap和HashTable的区别"></a>13. ConcurrentHashMap和HashTable的区别</h3><ul>
+<li><strong>底层数据结构</strong> JDK1.7 的 ConcurrentHashMap 底层采⽤ 分段的数组**+<strong>链表 实现，JDK1.8 采⽤的数据结构跟 HashMap1.8 的结构⼀样，数组+链表/红⿊⼆叉树。Hashtable 和 JDK1.8 之前的 HashMap 的底层数据结构类似都是采⽤ 数组</strong>+**链表 的形式，数组是 HashMap 的主体，链表则是主要为了解决哈希冲突⽽存在的；</li>
+<li><strong>实现线程安全的方式</strong> ① 在 <strong>JDK1.7</strong> 的时候，<strong>ConcurrentHashMap</strong>（分段锁） 对整个桶数组进⾏了分割分段(Segment)，每⼀把锁只锁容器其中⼀部分数据，多线程访问容器⾥不同数据段的数据，就不会存在锁竞争，提⾼并发访问率。 到了 <strong>JDK1.8</strong> 的时候已经摒弃了<strong>Segment</strong> 的概念，⽽是直接⽤ <strong>Node</strong> 数组**+<strong>链表</strong>+<strong>红⿊树的数据结构来实现，并发控制使⽤</strong>synchronized** 和 <strong>CAS</strong> 来操作。（<strong>JDK1.6</strong> 以后 对 <strong>synchronized</strong> 锁做了很多优化） 整个看起来就像是优化过且线程安全的 HashMap，虽然在 JDK1.8 中还能看到 Segment 的数据结构，但是已经简化了属性，只是为了兼容旧版本；② <strong>Hashtable(**同⼀把锁</strong>)** :使⽤ synchronized 来保证线程安全，效率⾮常低下。当⼀个线程访问同步⽅法时，其他线程也访问同步⽅法，可能会进⼊阻塞或轮询状态，如使⽤ put 添加元素，另⼀个线程不能使⽤ put 添加元素，也不能使⽤get，竞争会越来越激烈效率越低。</li>
+</ul>
+<h3 id="14-Comparable和Comparator的区别"><a href="#14-Comparable和Comparator的区别" class="headerlink" title="14. Comparable和Comparator的区别"></a>14. Comparable和Comparator的区别</h3><ul>
+<li>comparable接口出自java.lang包，它有一个compareTo(Object obj)方法用来排序</li>
+<li>comparator接口出自java.util包，它有一个compare(Object obj1,Object obj2)方法用来排序</li>
+</ul>
+<p>⼀般我们需要对⼀个集合使⽤⾃定义排序时，我们就要重写 compareTo() ⽅法或 compare() ⽅法，当我们需要对某⼀个集合实现两种排序⽅式，⽐如⼀个song对象中的歌名和歌⼿名分别采⽤⼀种排序⽅法的话，我们可以重写 compareTo() ⽅法和使⽤⾃制的Comparator⽅法或者以两个Comparator来实现歌名排序和歌星名排序，第⼆种代表我们只能使⽤两个参数版的 Collections.sort() </p>
+<p>Comparator定制排序例子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">List&lt;Integer&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">list.add(-<span class="number">1</span>);</span><br><span class="line">list.add(<span class="number">3</span>);</span><br><span class="line">list.add(<span class="number">3</span>);</span><br><span class="line">list.add(-<span class="number">5</span>);</span><br><span class="line">list.add(<span class="number">7</span>);</span><br><span class="line">list.add(<span class="number">4</span>);</span><br><span class="line">list.add(-<span class="number">9</span>);</span><br><span class="line">list.add(-<span class="number">7</span>);</span><br><span class="line">list.add(<span class="number">1</span>);</span><br><span class="line">list.add(<span class="number">8</span>);</span><br><span class="line">System.out.println(<span class="string">&quot;原始数组&quot;</span>);</span><br><span class="line">System.out.println(list);</span><br><span class="line">Collections.sort(list);</span><br><span class="line">System.out.println(<span class="string">&quot;自然排序&quot;</span>);</span><br><span class="line">System.out.println(list);</span><br><span class="line"><span class="comment">// 定制排序方法</span></span><br><span class="line">Collections.sort(list, <span class="keyword">new</span> Comparator&lt;Integer&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Integer o1, Integer o2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> o2.compareTo(o1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line">System.out.println(<span class="string">&quot;定制排序后&quot;</span>);</span><br><span class="line">System.out.println(list);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//output</span></span><br><span class="line">---------------------------------------------------------</span><br><span class="line">原始数组</span><br><span class="line">[-<span class="number">1</span>, <span class="number">3</span>, <span class="number">3</span>, -<span class="number">5</span>, <span class="number">7</span>, <span class="number">4</span>, -<span class="number">9</span>, -<span class="number">7</span>, <span class="number">1</span>, <span class="number">8</span>]</span><br><span class="line">自然排序</span><br><span class="line">[-<span class="number">9</span>, -<span class="number">7</span>, -<span class="number">5</span>, -<span class="number">1</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">7</span>, <span class="number">8</span>]</span><br><span class="line">定制排序后</span><br><span class="line">[<span class="number">8</span>, <span class="number">7</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">3</span>, <span class="number">1</span>, -<span class="number">1</span>, -<span class="number">5</span>, -<span class="number">7</span>, -<span class="number">9</span>]</span><br></pre></td></tr></table></figure>
+
+<p>compareTo例子</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Person.java</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">Person</span>&gt;</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Person o)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.age&gt;o.getAge())&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.age&gt;o.getAge()?<span class="number">1</span>:(<span class="keyword">this</span>.age==o.getAge()?<span class="number">0</span>:-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//排序</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    List&lt;Person&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    list.add(<span class="keyword">new</span> Person(<span class="string">&quot;张三&quot;</span>,<span class="number">30</span>));</span><br><span class="line">    list.add(<span class="keyword">new</span> Person(<span class="string">&quot;李四&quot;</span>,<span class="number">20</span>));</span><br><span class="line">    list.add(<span class="keyword">new</span> Person(<span class="string">&quot;王五&quot;</span>,<span class="number">5</span>));</span><br><span class="line">    list.add(<span class="keyword">new</span> Person(<span class="string">&quot;赵六&quot;</span>,<span class="number">10</span>));</span><br><span class="line">    Collections.sort(list);</span><br><span class="line">    Iterator&lt;Person&gt; iterator = list.iterator();</span><br><span class="line">    <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">        Person person = iterator.next();</span><br><span class="line">        System.out.println(person.getName() + <span class="string">&quot;,&quot;</span> + person.getAge());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//output</span></span><br><span class="line">--------------------------------------------------</span><br><span class="line">王五,<span class="number">5</span></span><br><span class="line">赵六,<span class="number">10</span></span><br><span class="line">李四,<span class="number">20</span></span><br><span class="line">张三,<span class="number">30</span></span><br></pre></td></tr></table></figure>
+
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/09/06/test/test/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  test
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/09/06/hello-world/">
+                hello-world
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: '',
+			appKey: '',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Kong Xiangyan</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>
