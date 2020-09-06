@@ -65,17 +65,17 @@
     <a id="title" href="/" class="logo">祥颜的笔记</a>
 
 	<ul id="menu">
-		<li class="menu-item">
+		<!-- <li class="menu-item">
 			<a href="/about" class="menu-item-link">ABOUT</a>
-		</li>
+		</li> -->
 		
-		<li class="menu-item">
+		<!-- <li class="menu-item">
 			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
 				UidGenerator
 			</a>
-		</li>
+		</li> -->
 		<li class="menu-item">
-			<a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+			<a href="https://github.com/yxgnok" class="menu-item-link" target="_blank">
 				<i class="fa fa-github fa-2x"></i>
 			</a>
 		</li>
@@ -253,7 +253,7 @@
 
 <div id="article-content">
 	<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h3 id="1-谈谈对IOC和AOP的理解"><a href="#1-谈谈对IOC和AOP的理解" class="headerlink" title="1. 谈谈对IOC和AOP的理解"></a>1. 谈谈对IOC和AOP的理解</h3><p><strong>IOC</strong><br>IOC(控制反转)是一种设计思想，就是将原本在程序中手动创建对象的控制器，交由spring框架来管理。IoC容器时Spring用来实现Ioc的载体，IoC容器实际上就是各Map，Map中存放的时各种对象。<br>将对象之间的相互依赖关系交给IoC容器来管理，并且由IoC容器完成IoC对象的注入，这样可以很大程度上简化应用的开发，把应用从复杂的依赖关系中解放出来。IoC容器就像是一个工厂一样，当我们需要创建一个对象的时候，只需要配置好配置文件/注解即可，完全不用考虑对象是如何被创建出来的。<br><strong>AOP</strong><br>AOP(面向切面编程)能够将那些与业务无关，却为业务模块所共用的逻辑或责任(例如事务处理、日志管理、权限管理等)封装起来，便于减少系统的重复代码，降低模块间的耦合度，并有利于未来的可拓展性和可维护性。<br>Spring AOP是基于动态代理的，如果要代理的对象，实现了某个接口，那么Spring AOP会使用JDK Proxy去创建对象，而对于没有实现接口的对象，就无法使用JDK Proxy去进行代理了，这时候Spring AOP会使用Cglib生成一个被代理对象的子类来作为代理<br>使用AOP之后可以把一些通用的功能抽象出来，在需要用到的地方直接使用即可，这样大大简化了代码里。我们需要增加新功能时也方便，这样也提高了系统扩展性。日志功能，事务管理等都使用了AOP</p>
-<h3 id="2-Spring有哪些主要模块"><a href="#2-Spring有哪些主要模块" class="headerlink" title="2. Spring有哪些主要模块"></a>2. Spring有哪些主要模块</h3><p><img src="../../../images/spring_framework.jpg" alt="Spring模块图"></p>
+<h3 id="2-Spring有哪些主要模块"><a href="#2-Spring有哪些主要模块" class="headerlink" title="2. Spring有哪些主要模块"></a>2. Spring有哪些主要模块</h3><p><img src="/../../../images/spring_framework.jpg" alt="Spring模块图"></p>
 <ul>
 <li><strong>Spring Core</strong> 基础，可以说spring其它所有的功能都需要依赖于该类库。主要提供IoC依赖注入功能</li>
 <li><strong>Spring Aspects</strong> 该模块为于AspectJ的集成提供支持</li>
