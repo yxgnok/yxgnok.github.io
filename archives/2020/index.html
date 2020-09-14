@@ -326,10 +326,11 @@ public static Transa
 					[TOC]
 线程的实现方式
 直接继承Thread类，重写run方法，缺点是无法继承其它类。
+
 public class MyThread extends Thread &#123;
     private String name;
 
-    public MyThread(String name) &
+    public MyThread(String name) 
 					...
 				</div>
 			</a>
@@ -366,7 +367,7 @@ public class MyThread extends Thread &#123;
 				</h2>
 				<div class="index-brief">
 					hashmap和hashtable的区别
-hashmap是线程不安全的，hashtable是线程安全的，hashtable在实现方法里面都加了synchronized,通常选用
+hashmap是线程不安全的，hashtable是线程安全的，hashtable在实现方法里面都加了synchronized
 
 
 					...
